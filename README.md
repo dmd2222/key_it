@@ -6,7 +6,7 @@ Installation
 ##################
 
 include_once("key_it.php");
-
+include_once("keyit.php");
 
 To do:
 Implement updater
