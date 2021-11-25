@@ -9,14 +9,8 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
-echo "<!-- Copyright (c) CS-Digital UG (hatungsbeschränkt) https://cs-digital-ug.de/  -->";
 
 
-/*
-Identifier: sj3SjMAfJDRIK5YLWkcprM1gVYjgmZuUHK1bJ5Qa96m6ARkK5hMysb5ruC4oxXYjiWNcCuYvJ7mkSKRzMKNXdiFLeoY2Wn1jYTNAGqXoqBYyu1eFrvWm3Pj7y7soMwULKDxQYiKZTs43xPDiPmVjhM
-Date: 03.12.2020
-*/
-echo "<!-- Identifier: sj3SjMAfJDRIK5YLWkcprM1gVYjgmZuUHK1bJ5Qa96m6ARkK5hMysb5ruC4oxXYjiWNcCuYvJ7mkSKRzMKNXdiFLeoY2Wn1jYTNAGqXoqBYyu1eFrvWm3Pj7y7soMwULKDxQYiKZTs43xPDiPmVjhM -->";
 
 
 $option_newkeydays=365; // Days until you need a new key
