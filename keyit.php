@@ -12,6 +12,8 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 /*Version: 0.0.0.0 */
+echo "Version 0.0.0.0";
+
 
 $option_newkeydays=365; // Days until you need a new key
 $filename = 'key.config';
