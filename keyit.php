@@ -15,7 +15,7 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 $option_newkeydays=365; // Days until you need a new key
 $filename = 'key.config';
-$email_ricipiants_contacts = array("",);
+$email_ricipiants_contacts = array("");
 $key_name = "k";
 $key_length = 70;
 
