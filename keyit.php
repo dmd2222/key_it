@@ -13,7 +13,7 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -Not redirect other way.
 */
 
-/*Version: 1.0.1.16 First Edition */
+/*Version: 1.0.1.17 First Edition */
 
 define('PROJECT_ROOT', __DIR__);
 
