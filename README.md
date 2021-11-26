@@ -1,6 +1,7 @@
 # key_it
 Simple website key solution over GET_Request keys with updatefunction
 
+#NOT READY TO USE!
 
 Installation
 ##################
