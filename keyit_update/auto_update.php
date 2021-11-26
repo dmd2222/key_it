@@ -31,7 +31,7 @@ if ($information + (10) < $timestamp_now){
 
     //Redirect
    // header("Location: gitupdater/gitupdater.php");
-include_once(dirname(__FILE__) . "gitupdater/gitupdater.php");
+include_once("gitupdater/gitupdater.php");
 
     //Write new last update timestamp
 write_in_file($file_name,$timestamp_now);
