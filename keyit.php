@@ -13,19 +13,19 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -Not redirect other way.
 */
 
-/*Version: 1.0.1.2 */
+/*Version: 1.0.1.0 */
 
+define('PROJECT_ROOT', __DIR__);
 
 
 $option_newkeydays=365; // Days until you need a new key
-$filename = 'key.config';
+$filename = PROJECT_ROOT . '/key.config';
 $email_ricipiants_contacts = array("");
 $key_name = "k";
 $key_length = 70;
 
-
 //Run update
-include_once("keyit_update/auto_update_check.php");
+include_once(PROJECT_ROOT . "/keyit_update/auto_update_check.php");
 
 //check file exist
 if (file_exists($filename)) {
