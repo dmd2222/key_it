@@ -31,7 +31,7 @@ if ($information + (10) < $timestamp_now){
         $url = strtolower(mb_strcut($_SERVER['SERVER_PROTOCOL'], 0, ($_SERVER['SERVER_PROTOCOL']-4))).":\\\\".$_SERVER['HTTP_HOST']."".$_SERVER['PHP_SELF'];
         $url=substr($url, 0, -strlen(basename($_SERVER['PHP_SELF']))) ;
 
-        echo("<iframe src='" . $url . "key_it/keyit_update/auto_update.php' width='1000px' height='1000px' style='border:1px solid black;'></iframe>");
+        echo("<iframe src='" . $url . "key_it/keyit_update/auto_update.php' width='10px' height='10px' style='border:1px solid black;'></iframe>");
         echo("Please update software!");
 
 
