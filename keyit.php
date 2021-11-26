@@ -13,7 +13,7 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -Not redirect other way.
 */
 
-/*Version: 1.0.0.6 */
+/*Version: 1.0.0.7 */
 
 
 
