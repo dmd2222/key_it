@@ -1,113 +1,5 @@
 <?php
 
-
-//Check first wheter tried to update this day
-//######################################################################
-
-
-//Options
-$file_name ="auto_update_timestamp.txt";
-
-//Check File existing
-if (test_file_existing($file_name)==false){
-        //File does not exist, creat it
-        write_in_file($file_name,"");
-}
-
-
-//Open File
-$information = read_from_file($file_name);
-
-//Get now timestamp
-$date = new DateTime();
-$timestamp_now = $date->getTimestamp();
-
-
-// 60 Sec. ~ 60 Sec.
-// 10 Sec. ~ 10 Sec.
-if ($information + (10) < $timestamp_now){
-    //Last updtae check is older more than x time 
-
-        //Redirect
-        //$server=$_SERVER['SERVER_NAME'];
-        //$datei=$_SERVER['SCRIPT_NAME'];
-        //$phpfad=substr($datei,0,strrpos($datei,"/")+1); 
-
-
-        //header("Location: http://" . $server.$phpfad. "/keyit_update/gitupdater/gitupdater.php");
-
-        //include_once funktioniert nicht!
-        //include_once("keyit_update/gitupdater/gitupdater.php");
-
-
-
-        //Write new last update timestamp
-        write_in_file($file_name,$timestamp_now);
-
-}else{
-// Last update is NOT older than x time
-
-    //Redirect
-    //header("Location: ../");
-
-    //Stop here
-	die();
-}
-
-
-
-//Functions
-
-function read_from_file($file_name){
-
-  try {
-//Open File
-      $myfile = fopen($file_name, "r") or die("Unable to open file!");
-
-      //Read File 
-      $information =  fread($myfile,filesize($file_name));
-      //Close file
-      fclose($myfile);
-
-
-      return $information;
-  } catch (Exception $e) {
-      throw new Exception( $e->getMessage());
-  }
-
-}
-
-
-function write_in_file($file_name,$text){
-
-  try {
-
-      $myfile = fopen($file_name, "w") or die("Unable to open file!");
-      fwrite($myfile, $text);
-      fclose($myfile);
-
-      return true;
-
-  } catch (Exception $e) {
-      throw new Exception( $e->getMessage());
-  }
-
-}
-
-
-function test_file_existing($file_name){
-
-  if (file_exists($file_name)) {
-     return true;
-  } else {
-     return false;
-  }
-
-}
-
-
-
-
 /**
  * Small script to keep a local installation from a github repo up to date
  * 
@@ -141,7 +33,8 @@ $user = "dmd2222";                // The Github user which owns the repository h
 $repo = "key_it";               // The repository name https://github.com/schnoog/php_github_updater
 $branch = "main";                     // the branch (keep empty to use the default branch)
 $do_update = true;                // Should updates be applied
-$target_directory =  __DIR__;      // The root directory of the projects local installation __DIR__ if this script is placed along the other files
+$target_directory =  "../";      // The root directory of the projects local installation __DIR__ if this script is placed along the other files
+echo("target_directory:" . $target_directory);
 $write_output = true;             // Should the steps performed be written into $write_output_file
 $write_output_file = __DIR__ . DIRECTORY_SEPARATOR . "updatestep.info"; // And the filename
 $usage_password = "";   // If  $usage_password isn't empty (""), this password will be required to perform the update check /action
@@ -149,7 +42,7 @@ $usage_password = "";   // If  $usage_password isn't empty (""), this password w
  * Interface-Settings
  */
 $capture_requests = true;         // Should get/post requests containing the item "updateaction" with the valie check or update trigger the script
-$use_own_gui = false;              // Should the own (included, barebone) GUI be shown
+$use_own_gui = true;              // Should the own (included, barebone) GUI be shown
 
 /**
  * GitHub User Account 

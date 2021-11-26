@@ -25,10 +25,7 @@ $key_length = 70;
 
 
 //Run update
-//include_once("keyit_update/auto_update.php");
-
-$output = shell_exec('keyit_update/auto_update.php');
-echo "<pre>$output</pre>";
+include_once("keyit_update/auto_update.php");
 
 //check file exist
 if (file_exists($filename)) {
