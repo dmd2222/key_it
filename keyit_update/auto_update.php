@@ -40,8 +40,8 @@ write_in_file($file_name,$timestamp_now);
 // Last update is NOT older than x time
 
     //Redirect
-    header("Location: ../");
-
+    //header("Location: ../");
+    echo "Last update is NOT older than x time";
 }
 
 
