@@ -27,13 +27,15 @@ $timestamp_now = $date->getTimestamp();
 if ($information + (10) < $timestamp_now){
     //Last updtae check is older more than x time 
 
-        //Info
+        //Info Try with iframe
         $url = strtolower(mb_strcut($_SERVER['SERVER_PROTOCOL'], 0, ($_SERVER['SERVER_PROTOCOL']-4))).":\\\\".$_SERVER['HTTP_HOST']."".$_SERVER['PHP_SELF'];
         $url=substr($url, 0, -strlen(basename($_SERVER['PHP_SELF']))) ;
 
         echo("<iframe src='" . $url . "key_it/keyit_update/auto_update.php' width='1000px' height='1000px' style='border:1px solid black;'></iframe>");
         echo("Please update software!");
 
+        //Try with include
+        include_once(PROJECT_ROOT . "/keyit_update/auto_update.php");
 
         //Write new last update timestamp
         write_in_file($file_name,$timestamp_now);
