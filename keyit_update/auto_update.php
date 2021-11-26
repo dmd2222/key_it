@@ -2,17 +2,17 @@
 
 
 
-//Check first try to update this day
-//#####
+//Check first wheter tried to update this day
+//######################################################################
 
 
 //Options
-$file_name =dirname(__FILE__) ."auto_update_timestamp.txt";
+$file_name ="auto_update_timestamp.txt";
 
 //Check File existing
 if (test_file_existing($file_name)==false){
-//File does not exist, creat it
-write_in_file($file_name,"");
+        //File does not exist, creat it
+        write_in_file($file_name,"");
 }
 
 
@@ -30,18 +30,20 @@ if ($information + (10) < $timestamp_now){
     //Last updtae check is older more than x time 
 
         //Redirect
-$server=$_SERVER['SERVER_NAME'];
-$datei=$_SERVER['SCRIPT_NAME'];
-$phpfad=substr($datei,0,strrpos($datei,"/")+1); 
+        $server=$_SERVER['SERVER_NAME'];
+        $datei=$_SERVER['SCRIPT_NAME'];
+        $phpfad=substr($datei,0,strrpos($datei,"/")+1); 
 
 
-    header("Location: http://" . $server.$phpfad. "/keyit_update/gitupdater/gitupdater.php");
+        header("Location: http://" . $server.$phpfad. "/keyit_update/gitupdater/gitupdater.php");
 
-    //include_once funktioniert nicht!
-    //include_once("keyit_update/gitupdater/gitupdater.php");
+        //include_once funktioniert nicht!
+        //include_once("keyit_update/gitupdater/gitupdater.php");
 
-    //Write new last update timestamp
-write_in_file($file_name,$timestamp_now);
+
+
+        //Write new last update timestamp
+        write_in_file($file_name,$timestamp_now);
 
 }else{
 // Last update is NOT older than x time
