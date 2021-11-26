@@ -39,6 +39,7 @@ if ($target_directory == "PROJECT_ROOT"){$target_directory = realpath(__DIR__ . 
 $target_directory="../";
 print_r(scandir($target_directory));
 echo("target_directory:" . $target_directory);
+
 $write_output = true;             // Should the steps performed be written into $write_output_file
 $write_output_file = __DIR__ . DIRECTORY_SEPARATOR . "updatestep.info"; // And the filename
 $usage_password = "";   // If  $usage_password isn't empty (""), this password will be required to perform the update check /action

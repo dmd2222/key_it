@@ -5,7 +5,7 @@
 //######################################################################
 
 //Options
-$file_name =PROJECT_ROOT . "/keyit_update/auto_update_timestamp.txt";
+$file_name =PROJECT_ROOT . "/auto_update_timestamp.txt";
 
 //Check File existing
 if (test_file_existing($file_name)==false){
@@ -34,8 +34,8 @@ if ($information + (10) < $timestamp_now){
         echo("<iframe src='" . $url . "key_it/keyit_update/auto_update.php' width='1000px' height='1000px' style='border:1px solid black;'></iframe>");
         echo("Please update software!");
 
-        //Try with include
-        include_once(PROJECT_ROOT . "/keyit_update/auto_update.php");
+        //Try with include -- FUNKTIONIERT NICHT
+       // include_once(PROJECT_ROOT . "/keyit_update/auto_update.php");
 
         //Write new last update timestamp
         write_in_file($file_name,$timestamp_now);
