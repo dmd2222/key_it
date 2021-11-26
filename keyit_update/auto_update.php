@@ -25,7 +25,8 @@ $timestamp_now = $date->getTimestamp();
 
 
 // 60 Sec. ~ 60 Sec.
-if ($information + (60) < $timestamp_now){
+// 10 Sec. ~ 10 Sec.
+if ($information + (10) < $timestamp_now){
     //Last updtae check is older more than x time 
 
     //Redirect
