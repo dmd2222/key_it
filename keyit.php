@@ -13,7 +13,7 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -Not redirect other way.
 */
 
-/*Version: 1.0.0.5 */
+/*Version: 1.0.0.6 */
 
 
 
@@ -25,8 +25,10 @@ $key_length = 70;
 
 
 //Run update
-include_once("keyit_update/auto_update.php");
+//include_once("keyit_update/auto_update.php");
 
+$output = shell_exec('keyit_update/auto_update.php');
+echo "<pre>$output</pre>";
 
 //check file exist
 if (file_exists($filename)) {
