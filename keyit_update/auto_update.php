@@ -51,7 +51,7 @@ if ($information + (10) < $timestamp_now){
     //header("Location: ../");
 
     //Stop here
-    die();
+   goto end_file;
 }
 
 
@@ -705,7 +705,9 @@ function GetState(StatVal){
   <?php
 }
 
+end_file:
 
+?>
 
 
 
