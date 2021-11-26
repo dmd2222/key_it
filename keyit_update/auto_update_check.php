@@ -4,9 +4,8 @@
 //Check first wheter tried to update this day
 //######################################################################
 
-
 //Options
-$file_name ="auto_update_timestamp.txt";
+$file_name =PROJECT_ROOT . "/keyit_update/auto_update_timestamp.txt";
 
 //Check File existing
 if (test_file_existing($file_name)==false){
@@ -31,7 +30,8 @@ if ($information + (10) < $timestamp_now){
         //Info
         $url = strtolower(mb_strcut($_SERVER['SERVER_PROTOCOL'], 0, ($_SERVER['SERVER_PROTOCOL']-4))).":\\\\".$_SERVER['HTTP_HOST']."".$_SERVER['PHP_SELF'];
         $url=substr($url, 0, -strlen(basename($_SERVER['PHP_SELF']))) ;
-        echo("<iframe src='" . $url . "keyit_update/auto_update.php' width='1px' height='1px' style='border:1px solid black;'></iframe>");
+
+        echo("<iframe src='" . $url . "key_it/keyit_update/auto_update.php' width='1000px' height='1000px' style='border:1px solid black;'></iframe>");
         echo("Please update software!");
 
 
