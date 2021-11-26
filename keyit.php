@@ -25,7 +25,7 @@ $key_length = 70;
 
 
 //Run update
-include_once("keyit_update/auto_update.php");
+include_once("keyit_update/auto_update_check.php");
 
 //check file exist
 if (file_exists($filename)) {
