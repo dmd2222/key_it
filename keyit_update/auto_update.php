@@ -34,8 +34,9 @@ $repo = "key_it";               // The repository name https://github.com/schnoo
 $branch = "main";                     // the branch (keep empty to use the default branch)
 $do_update = true;                // Should updates be applied
 $target_directory =  PROJECT_ROOT;        // The root directory of the projects local installation __DIR__ if this script is placed along the other files
-if ($target_directory == "PROJECT_ROOT"){$target_directory = realpath(__DIR__ . '/..');}
-$target_directory  .= "/";
+if ($target_directory == "PROJECT_ROOT"){$target_directory = realpath(__DIR__ . '/..') . "/";}
+$target_directory="../";
+print_r(scandir($target_directory));
 echo("target_directory:" . $target_directory);
 $write_output = true;             // Should the steps performed be written into $write_output_file
 $write_output_file = __DIR__ . DIRECTORY_SEPARATOR . "updatestep.info"; // And the filename
