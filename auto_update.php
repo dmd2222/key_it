@@ -37,6 +37,7 @@ $target_directory =  PROJECT_ROOT;        // The root directory of the projects 
 
 if ($target_directory == "PROJECT_ROOT"){$target_directory = realpath(__DIR__ . '/..') . "/";}
 //$target_directory="../";
+$target_directory=__DIR__;
 print_r(scandir($target_directory));
 echo("target_directory:" . $target_directory);
 
