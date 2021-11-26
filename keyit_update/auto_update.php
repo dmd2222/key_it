@@ -7,7 +7,7 @@
 
 
 //Options
-$file_name ="auto_update_timestamp.txt";
+$file_name =dirname(__FILE__) ."auto_update_timestamp.txt";
 
 //Check File existing
 if (test_file_existing($file_name)==false){
@@ -29,8 +29,8 @@ if ($information + (60) < $timestamp_now){
     //Last updtae check is older more than x time 
 
     //Redirect
-    header("Location: gitupdater/gitupdater.php");
-
+   // header("Location: gitupdater/gitupdater.php");
+include_once(dirname(__FILE__) . "gitupdater/gitupdater.php");
 
     //Write new last update timestamp
 write_in_file($file_name,$timestamp_now);
