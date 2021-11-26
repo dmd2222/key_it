@@ -33,7 +33,7 @@ $user = "dmd2222";                // The Github user which owns the repository h
 $repo = "key_it";               // The repository name https://github.com/schnoog/php_github_updater
 $branch = "main";                     // the branch (keep empty to use the default branch)
 $do_update = true;                // Should updates be applied
-$target_directory =  realpath(__DIR__ . '/..');        // The root directory of the projects local installation __DIR__ if this script is placed along the other files
+$target_directory =  PROJECT_ROOT;        // The root directory of the projects local installation __DIR__ if this script is placed along the other files
 echo("target_directory:" . $target_directory);
 $write_output = true;             // Should the steps performed be written into $write_output_file
 $write_output_file = __DIR__ . DIRECTORY_SEPARATOR . "updatestep.info"; // And the filename
