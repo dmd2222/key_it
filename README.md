@@ -5,7 +5,7 @@ www.example.com/?key=76237486287458725482543877824687264263498264726378623894628
 
 Installation
 ##################
-Only add this line in your project and your project will be secured.
+Only add this line in your project-site and copy the folder in your main folder and your project will be secured.
 
 include_once("key_it/keyit.php");
 
