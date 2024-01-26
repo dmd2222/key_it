@@ -1,5 +1,5 @@
 # key_it
-Simple website key solution over GET_Request keys with updatefunction like:
+Simple website key solution to protect unwanted access. Realized over GET_Request keys with updatefunction like:
 www.example.com/?key=76237486287458725482543877824687264263498264726378623894628
 
 
