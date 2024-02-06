@@ -21,7 +21,7 @@ define('PROJECT_ROOT', __DIR__);
 $option_newkeydays=365; // Days until you need a new key
 $filename = PROJECT_ROOT . '/key.config';
 $email_ricipiants_contacts = array("");
-$key_name = "k";
+$key_name = "key";
 $key_length = 70;
 
 //Run update
